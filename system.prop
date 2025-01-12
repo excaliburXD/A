@@ -16,11 +16,18 @@ ro.hardware.kmsetkey=beanpod
 ro.hardware.gatekeeper=beanpod
 
 # TEE
-ro.mtk_tee_gp_support=1
-ro.mtk_microtrust_tee_support=1
+ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_microtrust_tee_support=1
 
-# SYSTEM
+# FROM DEVICE CONFIG
 ro.postinstall.fstab.prefix=/system
+ro.boot.dynamic_partitions=true
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_ufs_support=1
+ro.virtual_ab.enabled=true
+ro.apex.updatable=true
+init.userspace_reboot.is_supported=true
 
 # FUSE
 persist.sys.fuse.passthrough.enable=true
