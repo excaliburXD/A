@@ -32,8 +32,8 @@
 /nvcfg                    emmc     /dev/block/platform/bootdevice/by-name/nvcfg             flags=display="Nvcfg";backup=1;
 /persist                  emmc     /dev/block/platform/bootdevice/by-name/persist           flags=display="Persist";backup=1;
 /nvram                    emmc     /dev/block/platform/bootdevice/by-name/nvram             flags=display="Nvram";backup=1;
-/persistent               emmc     /dev/block/platform/bootdevice/by-name/frp               flags=display="Persistent";backup=1
+/persistent               emmc     /dev/block/platform/bootdevice/by-name/frp               flags=display="Persistent";backup=1;
 
-# Removable
-/external_sd              auto auto    /dev/block/mmcblk0p1         /dev/block/mmcblk0          flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable                      
-/usb-otg                  auto vfat     /dev/block/sdd1              /dev/block/sdd              flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
+# Micro-SD & USB-OTG
+/external_sd              auto     /dev/block/mmcb1k0p1       /dev/block/mmcb1k0            flags=fsflags=utf8;display;="MicroSD-Card";storage;wipeingui;removable
+/usb-otg                  auto     /dev/block/sdd1            /dev/block/sdd                flags=fsflags=utf8;display;="USB-OTG";storage;wipeingui;removable
