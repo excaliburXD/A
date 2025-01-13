@@ -15,10 +15,10 @@
 /vbmeta_vendor            emmc     /dev/block/platform/bootdevice/by-name/vbmeta_vendor     flags=display="vbmeta Vendor.img";backup=1;flashimg=1;slotselect
 
 # Mapper Partitions
-/system                   auto     /dev/block/mapper/system                                 flags=backup=0;removable;slotselect
-/system_ext               auto     /dev/block/mapper/system_ext                             flags=backup=0;removable;slotselect
-/vendor                   auto     /dev/block/mapper/vendor                                 flags=backup=0;removable;slotselect
-/product                  auto     /dev/block/mapper/product                                flags=backup=0;removable;slotselect
+/system_root              ext4     /dev/block/mapper/system                                 flags=backup=0;removable;slotselect
+/system_ext               ext4     /dev/block/mapper/system_ext                             flags=backup=0;removable;slotselect
+/vendor                   ext4     /dev/block/mapper/vendor                                 flags=backup=0;removable;slotselect
+/product                  ext4     /dev/block/mapper/product                                flags=backup=0;removable;slotselect
 /system_img               emmc     /dev/block/mapper/system_a                               flags=display="System.img";backup;flashimg;removable;wipeingui
 /system_ext_img           emmc     /dev/block/mapper/system_ext_a                           flags=display="System_ext.img";backup;flashimg;removable;wipeingui
 /vendor_img               emmc     /dev/block/mapper/vendor_a                               flags=display="Vendor.img";backup;flashimg;removable;wipeingui
