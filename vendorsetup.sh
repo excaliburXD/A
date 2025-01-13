@@ -87,12 +87,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_SKIP_ORANGEFOX_PROCESS=1
     
     # R11.1 Settings
-    export FOX_VERSION="R11.0_Q"
-    export FOX_VARIANT="Radiant"
+    export FOX_VERSION="R11.0"
+    export FOX_VARIANT="radiant"
     export OF_MAINTAINER="Gilanggegea"
     export FOX_BUILD_DEVICE="Infinix Note 10 Pro"
     export FOX_BUILD_TYPE="A/B Devices"
-    export TARGET_DEVICE_ALT="X695C"
+    export TARGET_DEVICE_ALT="X695C,X695"
 
     # Use LZMA
     export OF_USE_LZMA_COMPRESSION=1
