@@ -16,9 +16,9 @@
 
 # Flashable Logical Partitions
 /system_img               emmc     /dev/block/platform/bootdevice/by-name/system            flags=backup;flashimg
-/system_ext_img           emmc     /dev/block/platform/bootdevice/system_ext                flags=display="System_EXT Image";backup;flashimg
-/vendor_img               emmc     /dev/block/platform/bootdevice/vendor                    flags=backup;flashimg
-/product_img              emmc     /dev/block/platform/bootdevice/product                   flags=display="Product.img";backup;flashimg
+/vendor_img               emmc     /dev/block/platform/bootdevice/by-name/vendor            flags=backup;flashimg
+/system_ext_img           emmc     /dev/block/platform/bootdevice/by-name/system_ext        flags=display="System_EXT Image";backup;flashimg
+/product_img              emmc     /dev/block/platform/bootdevice/by-name/product           flags=display="Product.img";backup;flashimg
 
 # Sensitif Data (IMEI, SIM, Device Info)
 # below four partitions are ext4, but we are using only for backup so emmc
@@ -33,3 +33,6 @@
 # Micro-SD & USB-OTG
 /external_sd              vfat     /dev/block/mmcblk0p1         /dev/block/mmcblk0          flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable                      
 /usb-otg                  vfat     /dev/block/sdd1              /dev/block/sdd              flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
+
+# Internal Storage
+/storage                  f2fs      /data/media/0                                            flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable;
