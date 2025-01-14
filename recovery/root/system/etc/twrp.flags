@@ -15,14 +15,14 @@
 /vbmeta_vendor            emmc     /dev/block/platform/bootdevice/by-name/vbmeta_vendor     flags=display="vbmeta Vendor.img";backup=1;flashimg=1;slotselect
 
 # Mapper Partitions
-/system_root              ext4     /dev/block/mapper/system                                 flags=backup=0;removable;slotselect
-/system_ext               ext4     /dev/block/mapper/system_ext                             flags=backup=0;removable;slotselect
-/vendor                   ext4     /dev/block/mapper/vendor                                 flags=backup=0;removable;slotselect
-/product                  ext4     /dev/block/mapper/product                                flags=backup=0;removable;slotselect
-/system_img               emmc     /dev/block/mapper/system_a                               flags=display="System.img";backup;flashimg;removable;wipeingui
-/system_ext_img           emmc     /dev/block/mapper/system_ext_a                           flags=display="System_ext.img";backup;flashimg;removable;wipeingui
-/vendor_img               emmc     /dev/block/mapper/vendor_a                               flags=display="Vendor.img";backup;flashimg;removable;wipeingui
-/product_img              emmc     /dev/block/mapper/product_a                              flags=display="Product.img";backup;flashimg;removable;wipeingui 
+#/system_root              ext4     /dev/block/mapper/system                                 flags=backup=0;removable;slotselect
+#/system_ext               ext4     /dev/block/mapper/system_ext                             flags=backup=0;removable;slotselect
+#/vendor                   ext4     /dev/block/mapper/vendor                                 flags=backup=0;removable;slotselect
+#/product                  ext4     /dev/block/mapper/product                                flags=backup=0;removable;slotselect
+#/system_img               emmc     /dev/block/mapper/system_a                               flags=display="System.img";backup;flashimg;removable;wipeingui
+#/system_ext_img           emmc     /dev/block/mapper/system_ext_a                           flags=display="System_ext.img";backup;flashimg;removable;wipeingui
+#/vendor_img               emmc     /dev/block/mapper/vendor_a                               flags=display="Vendor.img";backup;flashimg;removable;wipeingui
+#/product_img              emmc     /dev/block/mapper/product_a                              flags=display="Product.img";backup;flashimg;removable;wipeingui 
 
 # Sensitif Data (IMEI, SIM, Device Info)
 # below four partitions are ext4, but we are using only for backup so emmc
@@ -35,5 +35,5 @@
 /persistent               emmc     /dev/block/platform/bootdevice/by-name/frp               flags=display="Persistent";backup=1;
 
 # Micro-SD & USB-OTG
-/external_sd              auto     /dev/block/mmcb1k0p1       /dev/block/mmcb1k0            flags=fsflags=utf8;display;="MicroSD-Card";storage;wipeingui;removable
-/usb-otg                  auto     /dev/block/sdd1            /dev/block/sdd                flags=fsflags=utf8;display;="USB-OTG";storage;wipeingui;removable
+/external_sd              vfat     /dev/block/mmcblk0p1         /dev/block/mmcblk0          flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable                      
+/usb-otg                  vfat     /dev/block/sdd1              /dev/block/sdd              flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
