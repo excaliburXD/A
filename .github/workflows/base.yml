@@ -1,4 +1,4 @@
-name: twrp build staging X695C
+name: twrp build base X695C
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'staging'
+        default: 'base'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
