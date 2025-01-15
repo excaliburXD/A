@@ -120,7 +120,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 ## TWRP-Specific configuration
 
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := X695C | Gilanggegea
+TW_DEVICE_VERSION := Prebuilt-X695C-By_Gilanggegea
 TW_DEFAULT_LANGUAGE := en
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
