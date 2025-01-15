@@ -17,6 +17,3 @@ system_ext                                          /system_ext      ext4       
 # and fails if it does not find it.
 /dev/block/platform/bootdevice/by-name/misc         /misc            emmc                defaults       defaults
 /dev/block/by-name/boot                             /boot            emmc                defaults       slotselect
-
-# Use tranfs as cache
-/dev/block/by-name/tranfs                           /tranfs           ext4               noatime,nosuid,nodev,discard
