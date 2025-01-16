@@ -36,7 +36,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
     # A/B and Dynamic Partitions Support
     export FOX_AB_SUPPORT=true
-    export OF_AB_DEVICE=1
+    export FOX_AB_DEVICE=1
     export OF_DYNAMIC_PARTITIONS=true
     export FOX_VIRTUAL_AB_DEVICE=1
 
@@ -73,9 +73,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
     export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
     export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
-    export FOX_DELETE_AROMAFM=1
     export OF_USE_GREEN_LED=0
-    export FOX_ENABLE_APP_MANAGER=1
     export OF_ENABLE_LPTOOLS=1
     export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
     export OF_SKIP_FBE_DECRYPTION_SDKVERSION=34 # Don't try to decrypt A14(?)
