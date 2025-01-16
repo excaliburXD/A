@@ -15,6 +15,7 @@
 /vbmeta_vendor            emmc     /dev/block/platform/bootdevice/by-name/vbmeta_vendor     flags=display="vbmeta Vendor.img";backup=1;flashimg=1;slotselect
 
 # Flashable Logical Partitions
+/system_root              ext4     /dev/block/platform/bootdevice/by-name/system            flags=display="system_root ~can't be wiped~";backup=0;slotselect;wipeingui
 /system_img               emmc     /dev/block/platform/bootdevice/by-name/system            flags=backup;flashimg
 /vendor_img               emmc     /dev/block/platform/bootdevice/by-name/vendor            flags=backup;flashimg
 /system_ext_img           emmc     /dev/block/platform/bootdevice/by-name/system_ext        flags=display="System_EXT Image";backup;flashimg
