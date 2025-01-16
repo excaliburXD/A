@@ -49,9 +49,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_KERNEL_COMPRESSION := lzma # (more efficient than gzip or lz4, but takes more time during boot)
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_BOOT_HEADER_VERSION := 2
+BOARD_RAMDISK_USE_LZ4 := true # (Ramdisk Compression)
 
 BOARD_MKBOOTIMG_ARGS += \
     --ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
@@ -70,6 +72,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 BOARD_USES_METADATA_PARTITION := true
+STRIP_MODULES := true # (Debug Symbols binary)
 
 # Partitions Size
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
@@ -120,9 +123,8 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 ## TWRP-Specific configuration
 
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := Prebuilt-X695C-By_Gilanggegea
+TW_DEVICE_VERSION := Prebuilt-A12-X695C-By_Gilanggegea
 TW_DEFAULT_LANGUAGE := en
-TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_REPACKTOOLS := true
 TWRP_INCLUDE_LOGCAT := true
