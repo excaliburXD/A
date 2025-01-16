@@ -203,7 +203,7 @@ TW_INCLUDE_FASTBOOTD := true
 TW_SUPPORTS_AB := true
 TW_INCLUDE_LIBLP := true
 TW_HAS_F2FS_SUPPORT := true
-TW_DEVICE_VERSION := Radiant-130125 | Gilanggegea
+TW_DEVICE_VERSION := Radiant | Gilanggegea
 
 # Debug 
 TWRP_INCLUDE_LOGCAT := true
