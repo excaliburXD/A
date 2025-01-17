@@ -90,7 +90,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_MAINTAINER="Gilanggegea"
     export FOX_BUILD_DEVICE="Infinix Note 10 Pro"
     export FOX_BUILD_TYPE="A/B Devices"
-    export TARGET_DEVICE_ALT="X695C,X695"
+    export TARGET_DEVICE_ALT="X695C,x695c,X695"
 
     # Use LZMA
     export OF_USE_LZMA_COMPRESSION=1
