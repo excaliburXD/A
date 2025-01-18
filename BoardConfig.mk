@@ -72,7 +72,7 @@ BOARD_MKBOOTIMG_ARGS += \
     --header_size $(BOARD_HEADER_SIZE) \
     --pagesize $(BOARD_PAGE_SIZE) \
     --base $(BOARD_KERNEL_BASE) \
-    --dtb $(BOARD_DTB_SIZE) \
+    --dtb $(TARGET_PREBUILT_DTB) \
     --dtb_offset $(BOARD_DTB_OFFSET) \
     --cmdline "$(BOARD_KERNEL_CMDLINE)" \
     --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
