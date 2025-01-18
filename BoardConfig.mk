@@ -75,7 +75,7 @@ BOARD_MKBOOTIMG_ARGS += \
     --dtb $(TARGET_PREBUILT_DTB) \
     --dtb_offset $(BOARD_DTB_OFFSET) \
     --cmdline "$(BOARD_KERNEL_CMDLINE)" \
-    --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+    --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # AVB - Android Verified Boot
 BOARD_AVB_ENABLE := true
