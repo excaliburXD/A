@@ -1,0 +1,20 @@
+on boot 
+
+# Added Manual For beanpod (Trustonic)
+    mkdir /mnt/vendor/persist
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+
+# Added manual keystore
+service keystore_auth /system/bin/keystore_auth
+    user system
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    class early_hal
+    user root
+    group root drmrpc readproc log
+    disabled
+    seclabel u:r:recovery:s0
