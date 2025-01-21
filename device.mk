@@ -25,7 +25,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-mtkimpl.recovery
 
 PRODUCT_PACKAGES += \
-    bootctrl.mt6785
+    bootctrl.mt6785 \
     bootctrl.mt6785.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
