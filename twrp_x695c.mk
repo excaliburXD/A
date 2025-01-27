@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from x695c device
-$(call inherit-product, device/xiaomi/x695c/device.mk)
+$(call inherit-product, device/infinix/x695c/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := x695c
