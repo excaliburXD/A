@@ -14,11 +14,11 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/excaliburXD/infinix_deviant.git'
+        default: 'https://github.com/excaliburXD/infinix_Deviant.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'master'
+        default: 'deviant'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
