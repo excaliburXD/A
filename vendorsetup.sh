@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-FDEVICE="radiant"
+FDEVICE="deviant"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
@@ -28,8 +28,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export LC_ALL="C"
 
     # Partitions Recovery
-    export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-    export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
     export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/bootdevice/by-name/boot"
 
     # A/B and Dynamic Partitions Support
@@ -81,7 +79,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_SKIP_ORANGEFOX_PROCESS=1
     
     # R11.1 Settings
-    export FOX_VERSION="Stable/radiant"
+    export FOX_VERSION="Deviant"
     export FOX_VARIANT="Unofficial"
     export OF_MAINTAINER="Gilang EA"
     export FOX_BUILD_DEVICE="Infinix Note 10 Pro"

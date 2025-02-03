@@ -1,5 +1,4 @@
 import /init.recovery.microtrust.rc
-import /init.custom.rc
 
 on init
     setprop sys.usb.configfs 1
@@ -32,6 +31,9 @@ on post-fs
     symlink /dev/block/mapper/pl_b /dev/block/by-name/preloader_raw_b
 
 on boot
+    mkdir /mnt/vendor/persist
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist
+    
     start mtk.plpath.utils.link
 
 on property:persist.vendor.mtk.pl_lnk=1
@@ -71,6 +73,45 @@ service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     disable
     seclabel u:r:recovery:s0
 
+service gatekeeperd /system/bin/gatekeeperd /data/misc/gatekeeper
+    class late_start
+    user root
+    writepid /dev/cpuset/system-background/tasks
+    sclabel u:r:recovery:s0
+    
+service keystore_auth /system/bin/keystore_auth
+    user system
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc log
+    disabled
+    seclabel u:r:recovery:s0
+
+service apexd /system/bin/apexd
+    interface aidl apexservice
+    class core
+    user root
+    group root
+    oneshot
+    seclabel u:r:recovery:s0
+
+service apexd-bootstrap /system/bin/apexd --bootstrap
+    user root
+    group root
+    oneshot
+    seclabel u:r:recovery:s0
+
+service apexd-snapshotde /system/bin/apexd --snapshotde
+    user root
+    group root
+    oneshot
+    seclabel u:r:recovery:s0
+
 service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     class hal
     user root
@@ -80,7 +121,7 @@ service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-ser
 service vendor.keymaster-4-0-beanpod /vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod
     class early_hal
     user root
-    group system drmrpc
+    group root drmrpc
     seclabel u:r:recovery:s0
     
 on property:crypto.ready=1
@@ -88,9 +129,9 @@ on property:crypto.ready=1
     start teei_daemon
 
 on property:hwservicemanager.ready=true
-    start teei_daemon
     start vendor.gatekeeper-1-0
     start vendor.keymaster-4-0-beanpod
+    start teei_daemon
 
 on property:ro.crypto.state=unsupported
     stop teei_daemon
@@ -116,7 +157,8 @@ on post-fs-data
     mkdir /data/vendor_de 0770 system system
     mkdir /data/vendor_de/0 0770 system system
     on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
-
+    setprop vendor.soter.teei.logini "start"
+    setprop vendor.soter.teei.INIT 1
     start boot-hal-1-1
     start health-hal-2-1
     setprop sys.usb.config adb

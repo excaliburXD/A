@@ -20,5 +20,11 @@ ro.vendor.mtk_microtrust_tee_support=1
 # FSTAB
 ro.postinstall.fstab.prefix=/system
 
-# other
+# OTHER DEVICE CONFIG
+drm.service.enabled=true
+init.userspace_reboot.is_supported=true
 ro.boot.dynamic_partitions=true
+ro.vendor.mediatek.platform=MT6785
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_ufs_support=1

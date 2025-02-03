@@ -39,6 +39,8 @@ subsystem sound
 /dev/binder               0666   root       root
 /dev/hwbinder             0666   root       root
 /dev/vndbinder            0666   root       root
+/dev/tz_vfs               0660   system     system
+/dev/teei_config          0660   system     system
 
 /dev/pmsg0                0222   root       log
 
