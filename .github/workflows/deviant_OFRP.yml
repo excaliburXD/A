@@ -1,4 +1,4 @@
-name: Recovery Build x695c
+name: Deviant OFRP
 
 on:
   workflow_dispatch:
@@ -14,15 +14,15 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/excaliburXD/infinix_radiant'
+        default: 'https://github.com/excaliburXD/infinix_Deviant.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'x695c'
+        default: 'deviant'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/infinix/x695c'
+        default: 'device/infinix/deviant'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -32,11 +32,11 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'x695c'
+        default: 'deviant'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_x695c'
+        default: 'twrp_deviant'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
