@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-FDEVICE="deviant"
+FDEVICE="Deviant"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
@@ -63,7 +63,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     # Additional Support 
     export FOX_DELETE_AROMAFM=1
     export FOX_ENABLE_APP_MANAGER=1
-    export OF_DEFAULT_KEYMASTER_VERSION="4.0"
     export FOX_EXTREME_SIZE_REDUCTION=1
     export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
     export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
@@ -73,20 +72,21 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_SKIP_FBE_DECRYPTION_SDKVERSION=34 # Don't try to decrypt A14(?)
     export OF_ADVANCED_SECURITY=1
     export OF_USE_TWRP_SAR_DETECT=1
+    export OF_FLASHLIGHT_ENABLE=1
    
     # run a process after formatting data to work-around MTP issues
     export OF_RUN_POST_FORMAT_PROCESS=1
     export OF_SKIP_ORANGEFOX_PROCESS=1
     
-    # R11.1 Settings
-    export FOX_VERSION="Deviant"
+    # Information
+    export OF_MAINTAINER="Gilang.EA"
+    export FOX_VERSION="Stable"
     export FOX_VARIANT="Unofficial"
-    export OF_MAINTAINER="Gilang EA"
     export FOX_BUILD_DEVICE="Infinix Note 10 Pro"
-    export FOX_BUILD_TYPE="A/B Devices"
-    export TARGET_DEVICE_ALT="X695C"
-    export TARGET_DEVICE_ALT="X695D"
+    export FOX_BUILD_TYPE="AB"
     export TARGET_DEVICE_ALT="X695"
+    export TARGET_DEVICE_ALT="X695D"
+    export TARGET_DEVICE_ALT="X695C"
 
     # Log Build Variables
     if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/deviant
+DEVICE_PATH := device/infinix/Deviant
 
 # Minimal depends
 ALLOW_MISSING_DEPENDENCIES := true
@@ -30,7 +30,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X695C,X695D,X695,radiant,deviant
+TARGET_OTA_ASSERT_DEVICE := X695C,X695D,X695,Deviant,radiant
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6785
