@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/Deviant
+DEVICE_PATH := device/infinix/deviant
 
 # Minimal depends
 ALLOW_MISSING_DEPENDENCIES := true
@@ -30,7 +30,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X695C,X695D,X695,Deviant,radiant
+TARGET_OTA_ASSERT_DEVICE := X695C,X695D,X695,deviant,radiant
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6785
@@ -154,8 +154,8 @@ TW_DEVICE_VERSION := Deviant-by_Gilang.EA
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_Infinix-Deviant
-TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-Deviant
+TARGET_INIT_VENDOR_LIB := libinit_Infinix-deviant
+TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-deviant
 
 # Debug 
 TWRP_INCLUDE_LOGCAT := true
