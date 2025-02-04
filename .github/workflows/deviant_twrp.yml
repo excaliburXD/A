@@ -1,4 +1,4 @@
-name: Deviant TWRP
+name: deviant TWRP
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/excaliburXD/infinix_Deviant.git'
+        default: 'https://github.com/excaliburXD/infinix_deviant_project.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
