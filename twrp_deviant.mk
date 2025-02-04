@@ -11,7 +11,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/infinix/deviant/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Deviant
+PRODUCT_DEVICE := deviant
 PRODUCT_NAME := twrp_deviant
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix deviant
