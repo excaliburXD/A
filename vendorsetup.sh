@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-FDEVICE="Deviant"
+FDEVICE="deviant"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
@@ -85,8 +85,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_BUILD_DEVICE="Infinix Note 10 Pro"
     export FOX_BUILD_TYPE="AB"
     export TARGET_DEVICE_ALT="X695"
-    export TARGET_DEVICE_ALT="X695D"
     export TARGET_DEVICE_ALT="X695C"
+    export TARGET_DEVICE_ALT="X695D"
+    export TARGET_DEVICE_ALT="Infinix-X695C"
 
     # Log Build Variables
     if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

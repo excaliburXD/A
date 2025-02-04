@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/Deviant
+DEVICE_PATH := device/infinix/deviant
 
 # Minimal depends
 ALLOW_MISSING_DEPENDENCIES := true
@@ -29,9 +29,6 @@ TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := X695C,X695D,X695,Deviant,radiant
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6785
 TARGET_NO_BOOTLOADER := true
@@ -52,8 +49,8 @@ BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_TAGS_OFFSET := 0x0bc08000
 BOARD_SECOND_OFFSET := 0xbff88000
 BOARD_DTB_OFFSET := 0x0bc08000
-BOARD_KERNEL_IMAGE_NAME := Image.gz
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
+BOARD_KERNEL_IMAGE_NAME := kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_MKBOOTIMG_ARGS += \
     --header_version $(BOARD_BOOT_HEADER_VERSION) \
@@ -150,12 +147,11 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_FRAMERATE := 60
-TW_DEVICE_VERSION := Deviant-by_Gilang.EA
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_Infinix-Deviant
-TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-Deviant
+TARGET_INIT_VENDOR_LIB := libinit_Infinix-deviant
+TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-deviant
 
 # Debug 
 TWRP_INCLUDE_LOGCAT := true
